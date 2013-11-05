@@ -8,4 +8,4 @@ RUN cd /usr/src/znc-1.2; ./configure; make; make install
 RUN useradd -m znc
 RUN mkdir -p /home/znc/.znc; chown -R znc:znc /home/znc/.znc
 
-CMD ["su", "znc", "-c", "znc"]
+CMD ["su", "znc", "-c", "znc -f"]
