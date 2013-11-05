@@ -9,4 +9,4 @@ RUN useradd -m znc
 RUN mkdir -p /home/znc/.znc; chown -R znc:znc /home/znc/.znc
 
 # CMD moves around znc.conf to clear lock and runs znc
-CMD ["su", "znc", "-c", "cp ~/.znc/config/znc.conf ~/.znc/configs/znc.conf.new; rm ~/.znc/configs/znc.conf; mv ~/.znc/configs/znc.conf.new ~/.znc/configs/znc.conf; znc -f"]
+CMD ["su", "znc", "-c", "cp ~/.znc/configs/znc.conf ~/.znc/configs/znc.conf.new; rm ~/.znc/configs/znc.conf; mv ~/.znc/configs/znc.conf.new ~/.znc/configs/znc.conf; znc -f"]
