@@ -5,7 +5,7 @@ RUN apt-get update ;\
     rm -rf /var/lib/apt/lists/* 
 RUN mkdir -p /usr/src/znc-1.4 ;\
     cd /usr/src/; wget http://znc.in/releases/znc-1.4.tar.gz; tar -xvzf znc-*.tar.gz ;\
-    cd /usr/src/znc-1.4; ./configure; make; make install ;\
+    cd /usr/src/znc-1.4; ./configure; make; make install
 RUN useradd -m znc ;\
     mkdir -p /home/znc/.znc; chown -R znc:znc /home/znc/.znc
 
